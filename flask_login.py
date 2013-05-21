@@ -375,6 +375,8 @@ class LoginManager(object):
             user = self.token_callback(cookie)
             if user is not None:
                 user_id = user.get_id()
+            else:
+                user_id = None
         else:
             user_id = decode_cookie(cookie)
 
